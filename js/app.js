@@ -16,8 +16,18 @@ function flipCard() {
     secondCard = this;
 
     // do cards match?
-    console.log(firstCard.dataset.framework);
-    console.log(secondCard.dataset.framework);
+    if (firstCard.dataset.framework === secondCard.dataset.framework) {
+      // it's a match.
+      firstCard.removeEventListener('click', flipCard);
+      secondCard.removeEventListener('click', flipCard);
+    } else {
+      // Not a match
+      setTimeout(() => {
+        firstCard.classList.remove('flip');
+        secondCard.classList.remove('flip');
+      }, 1500);
+    }
+
   }
 }
 cards.forEach(card => card.addEventListener('click', flipCard));
