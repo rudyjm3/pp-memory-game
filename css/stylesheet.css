@@ -6,21 +6,38 @@
 body {
   height: 100vh;
   display: flex;
+  flex-direction: column;
   background: #060ab2
 }
-
+header {
+  margin-top: 10px;
+}
+.logo-container {
+  color: yellow;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+}
+.logo-container img {
+  width: 150px;
+}
 .memory-game {
-  width: 640px;
-  height: 640px;
+  /*width: 640px;
+  height: 640px;*/
+  width: 90%;
+  height: 90%;
   margin: auto;
+  margin-top: 35px;
   display: flex;
   flex-wrap: wrap;
-  border: 2px solid lime;
+  /*border: 2px solid lime;*/
   perspective: 1000px;
 }
 .memory-card {
   position: relative;
-  width: calc(25% - 10px);
+  /*width: calc(25% - 10px);
+  height: calc(33.333% - 10px);*/
+  width: calc(15% - 10px);
   height: calc(33.333% - 10px);
   margin: 5px;
   transform: scale(1);
